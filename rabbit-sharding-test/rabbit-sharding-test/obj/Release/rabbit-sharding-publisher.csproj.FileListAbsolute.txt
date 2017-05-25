@@ -1,0 +1,12 @@
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-sharding-test\obj\Release\rabbit-sharding-publisher.csprojResolveAssemblyReference.cache
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-sharding-test\bin\Release\rabbit-sharding-test.exe.config
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-sharding-test\bin\Release\rabbit-sharding-test.exe
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-sharding-test\bin\Release\rabbit-sharding-test.pdb
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-sharding-test\bin\Release\Newtonsoft.Json.dll
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-sharding-test\bin\Release\rabbit-models.dll
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-sharding-test\bin\Release\RabbitMQ.Client.dll
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-sharding-test\bin\Release\rabbit-models.pdb
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-sharding-test\bin\Release\Newtonsoft.Json.xml
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-sharding-test\bin\Release\RabbitMQ.Client.xml
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-sharding-test\obj\Release\rabbit-sharding-test.exe
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-sharding-test\obj\Release\rabbit-sharding-test.pdb

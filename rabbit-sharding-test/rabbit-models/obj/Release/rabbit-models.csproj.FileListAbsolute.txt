@@ -1,0 +1,4 @@
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-models\bin\Release\rabbit-models.dll
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-models\bin\Release\rabbit-models.pdb
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-models\obj\Release\rabbit-models.dll
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-models\obj\Release\rabbit-models.pdb

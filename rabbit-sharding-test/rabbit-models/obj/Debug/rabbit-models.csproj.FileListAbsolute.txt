@@ -1,0 +1,5 @@
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-models\bin\Debug\rabbit-models.dll
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-models\bin\Debug\rabbit-models.pdb
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-models\obj\Debug\rabbit-models.csprojResolveAssemblyReference.cache
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-models\obj\Debug\rabbit-models.dll
+c:\users\sameer\documents\visual studio 2017\Projects\rabbit-sharding-test\rabbit-models\obj\Debug\rabbit-models.pdb
