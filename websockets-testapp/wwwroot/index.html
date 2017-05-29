@@ -1,0 +1,35 @@
+<html>
+  <h1>Hello Fkkeerr</h1>
+  <script language="javascript" type="text/javascript">
+  var socket;
+    function connect(){
+      var uri = "ws://localhost:5000/ws";
+      socket = new WebSocket(uri);
+      
+      socket.onopen = function(event) {
+        console.log("websocket opened")
+        socket.send(JSON.stringify({"hello":"fuker"}));
+      }
+
+      socket.onclose = function(event) {
+
+      }
+
+      socket.onmessage = function (event) {
+          console.log(event);
+      }
+
+      socket.onerror = function(event) {
+          
+      }
+    }
+
+    function send(message) {
+      if(!socket) return;
+      
+    }
+
+    connect();
+
+  </script>
+</html>

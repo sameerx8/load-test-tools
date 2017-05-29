@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <GeneratedAssemblyInfo>false</GeneratedAssemblyInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
+    <PackageReference Include="microsoft.aspnetcore.diagnostics" Version="1.1.1" />
+    <PackageReference Include="microsoft.aspnetcore.mvc" Version="1.1.2" />
+    <PackageReference Include="microsoft.aspnetcore.staticfiles" Version="1.1.1" />
+    <PackageReference Include="microsoft.aspnetcore.websockets.server" Version="0.1.1" />
+    <PackageReference Include="newtonsoft.json" Version="10.0.2" />
+  </ItemGroup>
+</Project>
