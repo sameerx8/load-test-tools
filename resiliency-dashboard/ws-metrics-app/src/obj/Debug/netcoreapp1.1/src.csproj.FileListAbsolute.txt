@@ -1,0 +1,8 @@
+/Users/sameer-mac/Projects/ws-test-app/ws-metrics-app/src/bin/Debug/netcoreapp1.1/src.deps.json
+/Users/sameer-mac/Projects/ws-test-app/ws-metrics-app/src/bin/Debug/netcoreapp1.1/src.runtimeconfig.json
+/Users/sameer-mac/Projects/ws-test-app/ws-metrics-app/src/bin/Debug/netcoreapp1.1/src.runtimeconfig.dev.json
+/Users/sameer-mac/Projects/ws-test-app/ws-metrics-app/src/bin/Debug/netcoreapp1.1/src.dll
+/Users/sameer-mac/Projects/ws-test-app/ws-metrics-app/src/bin/Debug/netcoreapp1.1/src.pdb
+/Users/sameer-mac/Projects/ws-test-app/ws-metrics-app/src/obj/Debug/netcoreapp1.1/src.AssemblyInfo.cs
+/Users/sameer-mac/Projects/ws-test-app/ws-metrics-app/src/obj/Debug/netcoreapp1.1/src.dll
+/Users/sameer-mac/Projects/ws-test-app/ws-metrics-app/src/obj/Debug/netcoreapp1.1/src.pdb
