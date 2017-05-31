@@ -2643,6 +2643,66 @@
           "lib/netstandard1.3/System.ObjectModel.dll": {}
         }
       },
+      "System.Reactive/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive.PlatformServices": "3.1.1"
+        }
+      },
+      "System.Reactive.Core/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.0.1",
+          "System.Diagnostics.Contracts": "4.0.1",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Reactive.Interfaces": "3.1.1",
+          "System.Threading.Thread": "4.0.0",
+          "System.Threading.ThreadPool": "4.0.10"
+        },
+        "compile": {
+          "lib/netcoreapp1.0/System.Reactive.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp1.0/System.Reactive.Core.dll": {}
+        }
+      },
+      "System.Reactive.Interfaces/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/System.Reactive.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Reactive.Interfaces.dll": {}
+        }
+      },
+      "System.Reactive.Linq/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive.Core": "3.1.1",
+          "System.Runtime.InteropServices.WindowsRuntime": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Reactive.Linq.dll": {}
+        }
+      },
+      "System.Reactive.PlatformServices/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive.Linq": "3.1.1"
+        },
+        "compile": {
+          "lib/netcoreapp1.0/System.Reactive.PlatformServices.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp1.0/System.Reactive.PlatformServices.dll": {}
+        }
+      },
       "System.Reflection/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2898,6 +2958,18 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "System.Runtime.InteropServices.WindowsRuntime/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.Runtime.InteropServices.WindowsRuntime.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Runtime.InteropServices.WindowsRuntime.dll": {}
         }
       },
       "System.Runtime.Loader/4.3.0": {
@@ -7425,6 +7497,99 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
+    "System.Reactive/3.1.1": {
+      "sha512": "elkQdVQoBVX39BHrYHMc3Rnbb7a9qBJIwNCvhq1psPMOEPo62/VHB0lJu671x3fOrGL4V/85n6p2Az1tw7Kvmg==",
+      "type": "package",
+      "path": "system.reactive/3.1.1",
+      "files": [
+        "system.reactive.3.1.1.nupkg.sha512",
+        "system.reactive.nuspec"
+      ]
+    },
+    "System.Reactive.Core/3.1.1": {
+      "sha512": "CKWC+UP1aM75taNX+sTBn2P97uHIUjKxq+z45iy7P91QGFqNFleR2tsqIC76HMVvYl7o8oWyMiycdsc9rC1Z/g==",
+      "type": "package",
+      "path": "system.reactive.core/3.1.1",
+      "files": [
+        "lib/net45/System.Reactive.Core.dll",
+        "lib/net45/System.Reactive.Core.xml",
+        "lib/net46/System.Reactive.Core.dll",
+        "lib/net46/System.Reactive.Core.xml",
+        "lib/netcore451/System.Reactive.Core.dll",
+        "lib/netcore451/System.Reactive.Core.xml",
+        "lib/netcoreapp1.0/System.Reactive.Core.dll",
+        "lib/netcoreapp1.0/System.Reactive.Core.xml",
+        "lib/netstandard1.0/System.Reactive.Core.dll",
+        "lib/netstandard1.0/System.Reactive.Core.xml",
+        "lib/netstandard1.1/System.Reactive.Core.dll",
+        "lib/netstandard1.1/System.Reactive.Core.xml",
+        "lib/netstandard1.3/System.Reactive.Core.dll",
+        "lib/netstandard1.3/System.Reactive.Core.xml",
+        "lib/uap10.0/System.Reactive.Core.dll",
+        "lib/uap10.0/System.Reactive.Core.xml",
+        "lib/wpa81/System.Reactive.Core.dll",
+        "lib/wpa81/System.Reactive.Core.xml",
+        "system.reactive.core.3.1.1.nupkg.sha512",
+        "system.reactive.core.nuspec"
+      ]
+    },
+    "System.Reactive.Interfaces/3.1.1": {
+      "sha512": "aNVY3QoRznGFeQ+w+bMqhD8ElNWoyYq+7XTQIoxKKjBOyTOjUqIMEf1wvSdtwC4y92zg2W9q38b4Sr6cYNHVLg==",
+      "type": "package",
+      "path": "system.reactive.interfaces/3.1.1",
+      "files": [
+        "lib/net45/System.Reactive.Interfaces.dll",
+        "lib/net45/System.Reactive.Interfaces.xml",
+        "lib/netstandard1.0/System.Reactive.Interfaces.dll",
+        "lib/netstandard1.0/System.Reactive.Interfaces.xml",
+        "system.reactive.interfaces.3.1.1.nupkg.sha512",
+        "system.reactive.interfaces.nuspec"
+      ]
+    },
+    "System.Reactive.Linq/3.1.1": {
+      "sha512": "HwsZsoYRg51cLGBOEa0uoZ5+d4CMcHEg/KrbqePhLxoz/SLA+ULISphBtn3woABPATOQ6j5YgGZWh4jxnJ3KYQ==",
+      "type": "package",
+      "path": "system.reactive.linq/3.1.1",
+      "files": [
+        "lib/net45/System.Reactive.Linq.dll",
+        "lib/net45/System.Reactive.Linq.xml",
+        "lib/net46/System.Reactive.Linq.dll",
+        "lib/net46/System.Reactive.Linq.xml",
+        "lib/netstandard1.0/System.Reactive.Linq.dll",
+        "lib/netstandard1.0/System.Reactive.Linq.xml",
+        "lib/netstandard1.1/System.Reactive.Linq.dll",
+        "lib/netstandard1.1/System.Reactive.Linq.xml",
+        "lib/netstandard1.3/System.Reactive.Linq.dll",
+        "lib/netstandard1.3/System.Reactive.Linq.xml",
+        "system.reactive.linq.3.1.1.nupkg.sha512",
+        "system.reactive.linq.nuspec"
+      ]
+    },
+    "System.Reactive.PlatformServices/3.1.1": {
+      "sha512": "jCJ3iGDLb4duOxZ/Uo3O7PssWE48uRp0fw92AlIwrMNaZRUmZNkZyqbl0nUT+joFARBYun8XiVIDQreMJKBedA==",
+      "type": "package",
+      "path": "system.reactive.platformservices/3.1.1",
+      "files": [
+        "lib/net45/System.Reactive.PlatformServices.dll",
+        "lib/net45/System.Reactive.PlatformServices.xml",
+        "lib/net46/System.Reactive.PlatformServices.dll",
+        "lib/net46/System.Reactive.PlatformServices.xml",
+        "lib/netcore451/System.Reactive.PlatformServices.dll",
+        "lib/netcore451/System.Reactive.PlatformServices.xml",
+        "lib/netcoreapp1.0/System.Reactive.PlatformServices.dll",
+        "lib/netcoreapp1.0/System.Reactive.PlatformServices.xml",
+        "lib/netstandard1.0/System.Reactive.PlatformServices.dll",
+        "lib/netstandard1.0/System.Reactive.PlatformServices.xml",
+        "lib/netstandard1.3/System.Reactive.PlatformServices.dll",
+        "lib/netstandard1.3/System.Reactive.PlatformServices.xml",
+        "lib/uap10.0/System.Reactive.PlatformServices.dll",
+        "lib/uap10.0/System.Reactive.PlatformServices.xml",
+        "lib/wpa81/System.Reactive.PlatformServices.dll",
+        "lib/wpa81/System.Reactive.PlatformServices.xml",
+        "system.reactive.platformservices.3.1.1.nupkg.sha512",
+        "system.reactive.platformservices.nuspec"
+      ]
+    },
     "System.Reflection/4.3.0": {
       "sha512": "sKGwMWLGuJjLTkVIDbtwEEJ1H4ZNvxHvVfqFCeVyWk9mDwYqCMwqLmrc8Ll6Bxd9JhQkMU7Ej7eUePYHktx99A==",
       "type": "package",
@@ -8244,6 +8409,53 @@
         "runtimes/win/lib/net45/System.Runtime.InteropServices.RuntimeInformation.dll",
         "runtimes/win/lib/netcore50/System.Runtime.InteropServices.RuntimeInformation.dll",
         "runtimes/win/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll"
+      ]
+    },
+    "System.Runtime.InteropServices.WindowsRuntime/4.0.1": {
+      "sha512": "oIIXM4w2y3MiEZEXA+RTtfPV+SZ1ymbFdWppHlUciNdNIL0/Uo3HW9q9iN2O7T7KUmRdvjA7C2Gv4exAyW4zEQ==",
+      "type": "package",
+      "path": "system.runtime.interopservices.windowsruntime/4.0.1",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/net45/_._",
+        "lib/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "lib/netstandard1.3/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios1/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "ref/netcore50/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/de/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/es/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/fr/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/it/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/ja/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/ko/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/ru/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/zh-hans/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/zh-hant/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "ref/netstandard1.0/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/de/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/es/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/fr/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/it/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/ja/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/ko/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/ru/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/zh-hans/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/zh-hant/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "runtimes/aot/lib/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "system.runtime.interopservices.windowsruntime.4.0.1.nupkg.sha512",
+        "system.runtime.interopservices.windowsruntime.nuspec"
       ]
     },
     "System.Runtime.Loader/4.3.0": {
@@ -9680,7 +9892,8 @@
       "microsoft.aspnetcore.mvc >= 1.1.2",
       "microsoft.aspnetcore.staticfiles >= 1.1.1",
       "microsoft.aspnetcore.websockets.server >= 0.1.1",
-      "newtonsoft.json >= 10.0.2"
+      "newtonsoft.json >= 10.0.2",
+      "system.reactive >= 3.1.1"
     ]
   },
   "packageFolders": {
@@ -9689,16 +9902,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sameer-mac/Projects/test-websockets/test-websockets.csproj",
+      "projectUniqueName": "/Users/sameer-mac/Projects/load-test-tools/load-test-tools/resiliency-websocket-collector/test-websockets.csproj",
       "projectName": "test-websockets",
-      "projectPath": "/Users/sameer-mac/Projects/test-websockets/test-websockets.csproj",
-      "outputPath": "/Users/sameer-mac/Projects/test-websockets/obj/",
+      "projectPath": "/Users/sameer-mac/Projects/load-test-tools/load-test-tools/resiliency-websocket-collector/test-websockets.csproj",
+      "outputPath": "/Users/sameer-mac/Projects/load-test-tools/load-test-tools/resiliency-websocket-collector/obj/",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
       "files": {
-        "lib/netcoreapp1.1/test-websockets.dll": "/Users/sameer-mac/Projects/test-websockets/bin/placeholder/netcoreapp1.1/test-websockets.dll"
+        "lib/netcoreapp1.1/test-websockets.dll": "/Users/sameer-mac/Projects/load-test-tools/load-test-tools/resiliency-websocket-collector/bin/placeholder/netcoreapp1.1/test-websockets.dll"
       },
       "frameworks": {
         "netcoreapp1.1": {
@@ -9736,6 +9949,10 @@
           "newtonsoft.json": {
             "target": "Package",
             "version": "10.0.2"
+          },
+          "system.reactive": {
+            "target": "Package",
+            "version": "3.1.1"
           }
         }
       }

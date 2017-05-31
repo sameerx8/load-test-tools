@@ -15,16 +15,15 @@ using System.Text;
 using Newtonsoft.Json;
 using System.Collections.Concurrent;
 using System.Collections.ObjectModel;
+using System.Reactive;
 
 namespace test_websockets {
     public interface IWebSocketManager{
         ConcurrentDictionary<string, WebSocket> ConnectedSockets{get;set;}
-
     }
 
   public class WebSocketManager : IWebSocketManager {
-        public ConcurrentDictionary<string, WebSocket> ConnectedSockets {get;set;}
-        
+    public ConcurrentDictionary<string, WebSocket> ConnectedSockets {get;set;}
   }
 
   public class Startup {

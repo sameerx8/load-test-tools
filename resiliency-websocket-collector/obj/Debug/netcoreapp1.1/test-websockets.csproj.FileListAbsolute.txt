@@ -6,3 +6,10 @@
 /Users/sameer-mac/Projects/test-websockets/bin/Debug/netcoreapp1.1/test-websockets.pdb
 /Users/sameer-mac/Projects/test-websockets/obj/Debug/netcoreapp1.1/test-websockets.dll
 /Users/sameer-mac/Projects/test-websockets/obj/Debug/netcoreapp1.1/test-websockets.pdb
+/Users/sameer-mac/Projects/load-test-tools/load-test-tools/resiliency-websocket-collector/bin/Debug/netcoreapp1.1/test-websockets.deps.json
+/Users/sameer-mac/Projects/load-test-tools/load-test-tools/resiliency-websocket-collector/bin/Debug/netcoreapp1.1/test-websockets.runtimeconfig.json
+/Users/sameer-mac/Projects/load-test-tools/load-test-tools/resiliency-websocket-collector/bin/Debug/netcoreapp1.1/test-websockets.runtimeconfig.dev.json
+/Users/sameer-mac/Projects/load-test-tools/load-test-tools/resiliency-websocket-collector/obj/Debug/netcoreapp1.1/test-websockets.dll
+/Users/sameer-mac/Projects/load-test-tools/load-test-tools/resiliency-websocket-collector/obj/Debug/netcoreapp1.1/test-websockets.pdb
+/Users/sameer-mac/Projects/load-test-tools/load-test-tools/resiliency-websocket-collector/bin/Debug/netcoreapp1.1/test-websockets.dll
+/Users/sameer-mac/Projects/load-test-tools/load-test-tools/resiliency-websocket-collector/bin/Debug/netcoreapp1.1/test-websockets.pdb
