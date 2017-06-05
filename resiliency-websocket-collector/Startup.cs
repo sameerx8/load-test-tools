@@ -16,14 +16,30 @@ using Newtonsoft.Json;
 using System.Collections.Concurrent;
 using System.Collections.ObjectModel;
 using System.Reactive;
+using System.Reactive.Subjects;
+using System.Reactive.Linq;
 
 namespace test_websockets {
     public interface IWebSocketManager{
         ConcurrentDictionary<string, WebSocket> ConnectedSockets{get;set;}
+        IObservable<MetricSnapshot> MetricsStream{get;}
+        void OnMetricReceived(MetricSnapshot snapshot);
     }
 
   public class WebSocketManager : IWebSocketManager {
+    private Subject<MetricSnapshot> _metricSubject;
+    public WebSocketManager() {
+        _metricSubject = new Subject<MetricSnapshot>();
+        MetricsStream = _metricSubject;
+        
+    }
     public ConcurrentDictionary<string, WebSocket> ConnectedSockets {get;set;}
+
+    public IObservable<MetricSnapshot> MetricsStream{get;}
+
+    public void OnMetricReceived(MetricSnapshot snapshot){
+        _metricSubject.OnNext(snapshot);
+    }
   }
 
   public class Startup {
@@ -57,6 +73,7 @@ namespace test_websockets {
 
             wsMgr.ConnectedSockets = _websockets;
 
+
             app.Use( async (http, next) => {
 
                 if (http.WebSockets.IsWebSocketRequest) {
@@ -89,6 +106,12 @@ namespace test_websockets {
     public class MetricSnapshot {
         public string commandName { get; set; }
         public List<EventTypeAggregate> aggregates {get;set;}
+        public long success{get;set;}
+        public long failure {get;set;}
+        public long timeout {get;set;}
+        public long fallbackSuccess{get;set;}
+        public long fallbackFailure{get;set;}
+        public long shortCircuited{get;set;}
         public decimal latency_90th { get; set; }
         public decimal latency_99th { get; set; }
         public decimal latency_99_5th { get; set; }

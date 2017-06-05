@@ -6,6 +6,7 @@ export class MetricSnapshotMessage{
   messagesPerSecond: number;
   circuitBreakerStatus: string;
   hostName: string;
+  requestRate: Array<number>;
 }
 
 export class EventTypeAggregate{

@@ -17,6 +17,7 @@ namespace test_websockets {
     
     [Route("api/metrics")]
     public async Task<IActionResult> PostMetrics([FromBody]MetricSnapshot snapshot) {
+
         var data = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(snapshot));
 
         foreach( var socket in _websocketManager.ConnectedSockets){
@@ -27,9 +28,7 @@ namespace test_websockets {
             _websocketManager.ConnectedSockets.TryRemove(socket.Key, out var sock);
           }
         }
-
-
-
+        
         return Ok();
     }
   }

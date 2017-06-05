@@ -8,8 +8,8 @@
             <div class="ibox-content">
 
                 <div class="row">
-                    <div class="col-sm-5">
-                        <span sparkline [datasets]="sparklineData" [options]="sparklineOptions"></span>
+                    <div class="col-sm-4">
+                        <span sparkline [datasets]="commandMetric.requestRate" [options]="sparklineOptions"></span>
                     </div>
                     <div class="col-sm-2">
                         <h4>Circuit Breaker</h4>
