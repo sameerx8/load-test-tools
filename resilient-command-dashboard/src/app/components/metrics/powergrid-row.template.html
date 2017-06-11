@@ -1,0 +1,19 @@
+
+  <td>{{commandMetric.commandName}}</td>
+  <td>{{commandMetric.commandTag}}</td>
+  <td><span class="badge badge-info">{{commandMetric.messagesPerSecond}}/s</span></td>
+  <td><span sparkline [datasets]="commandMetric.requestRate" [options]="sparklineOptions"></span></td>
+  <td><span class="badge" [class.badge-success]="commandMetric.errorPercentage===0" [class.badge-warning]="commandMetric.errorPercentage>0" [class.badge-error]="commandMetric.errorPercentage>=50">{{commandMetric.errorPercentage}}</span></td>
+  <td><span class="badge badge-info">{{commandMetric.latency_90th}}</span></td>
+  <td><span class="badge badge-info">{{commandMetric.latency_99th}}</span></td>
+  <td><span class="badge badge-info">{{commandMetric.latency_99_5th}}</span></td>
+  <td><span class="label label-success" [class.label-danger]="commandMetric.circuitBreakerStatus!=='CLOSED'">{{commandMetric.circuitBreakerStatus}}</span></td>
+  <td><span class="badge badge-info">{{commandMetric.noOfHosts}}</span></td>
+  <td><span class="badge badge-info">{{commandMetric.noOfHosts * commandMetric.messagesPerSecond}}</span></td>
+  <td><span class="badge badge-primary">{{commandMetric.success}}</span></td>
+  <td><span class="badge" [class.badge-success]="commandMetric.failure===0" [class.badge-warning]="commandMetric.failure>0" [class.badge-error]="commandMetric.failure>=5">{{commandMetric.failure}}</span></td>
+  <td><span class="badge badge-warning">{{commandMetric.timeout}}</span></td>
+  <td><span class="badge badge-warning">{{commandMetric.retry}}</span></td>
+  <td><span class="badge badge-success">{{commandMetric.fallbackSuccess}}</span></td>
+  <td><span class="badge badge-danger">{{commandMetric.fallbackFailure}}</span></td>
+  <td><span class="badge badge-info">{{commandMetric.shortCircuited}}</span></td>

@@ -3,7 +3,7 @@ import { MetricSnapshotMessage } from './models/metric-snapshot';
 
 @Component({
   selector: 'command-metric',
-  templateUrl: 'command-metric.template.html'
+  templateUrl: 'powergrid-row.template.html'
 })
 export class CommandMetric {
   @Input() commandMetric: MetricSnapshotMessage;

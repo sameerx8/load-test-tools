@@ -2,15 +2,26 @@ import { Component, OnInit } from '@angular/core';
 import { MetricSnapshotMessage } from './models/metric-snapshot';
 import { CommandMetricStreamService } from '../../services/command-metric-stream.service';
 import { MetricData } from '../../components/data/metric-data';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/debounceTime';
+import { CommandFilterPipe } from '../../pipes/command-filter.pipe';
+import { CommandOrderPipe } from '../../pipes/command-sort.pipe';
+
 
 @Component({
   selector: 'command-metrics',
-  templateUrl: 'command-metric-list.template.html',
+  templateUrl: 'powergrid-table.template.html',
   providers: [ CommandMetricStreamService ]
 })
 export class CommandMetricsList implements OnInit {
   private commandMetrics: MetricSnapshotMessage[] = [];
   private requestRates: CommandRequestRate[] = [] ;
+  private sortState: SortState[] = [];
+  public searchText = '';
+  public sortKey = '';
+  public sortAsc = true;
+  public searchInputCtrl = new FormControl();
 
   public sparklineData:Array<any> = [5, 6, 7, 2, 0, 4, 2, 4, 5, 7, 2, 4, 12, 14, 4, 2, 14, 12, 7];
 
@@ -22,7 +33,32 @@ export class CommandMetricsList implements OnInit {
     fillColor: '#ffffff'
   };
 
+  public setSortKey(key: string) {
+    const keyIdx = this.sortState.findIndex(c => c.sortKey === key);
+
+    if (keyIdx === -1) {
+      const sortState: SortState = {
+        sortKey: key,
+        asc: true
+      };
+
+      this.sortState.push(sortState);
+    } else {
+      this.sortState[keyIdx].asc = !this.sortState[keyIdx].asc;
+    }
+
+    this.sortKey = key;
+    this.sortAsc = this.sortState[keyIdx] ? this.sortState[keyIdx].asc : true;
+  }
+
   ngOnInit(): void {
+    this.searchInputCtrl
+      .valueChanges
+      .debounceTime(200)
+      .subscribe(search => {
+        this.searchText = search;
+      });
+
     this.metricService.connect();
 
     if (!this.metricService.metricStream) {
@@ -59,7 +95,6 @@ export class CommandMetricsList implements OnInit {
         } else {
           this.commandMetrics[resultIdx] = ev;
         }
-
     });
   }
 
@@ -70,4 +105,9 @@ export class CommandMetricsList implements OnInit {
 export class CommandRequestRate {
   commandName : string;
   requestRates: Array<number>;
+}
+
+export class SortState {
+  sortKey: string;
+  asc: boolean;
 }

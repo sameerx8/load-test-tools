@@ -105,6 +105,9 @@ namespace test_websockets {
 
     public class MetricSnapshot {
         public string commandName { get; set; }
+        public string noOfHosts{get;set;}
+        public string commandTag{get;set;}
+        public string errorPercentage{get;set;}
         public List<EventTypeAggregate> aggregates {get;set;}
         public long success{get;set;}
         public long failure {get;set;}
