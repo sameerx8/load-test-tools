@@ -115,6 +115,7 @@ namespace test_websockets {
         public long fallbackSuccess{get;set;}
         public long fallbackFailure{get;set;}
         public long shortCircuited{get;set;}
+        public long retry{get;set;}
         public decimal latency_90th { get; set; }
         public decimal latency_99th { get; set; }
         public decimal latency_99_5th { get; set; }

@@ -12,14 +12,15 @@ export class CommandMetricStreamService {
 
   public metricStream: Observable<MetricSnapshotMessage>;
 
-  connect() : void {
+  connect(): void {
     this.url = 'ws://localhost:5000/ws';
-    this.ws = new WebSocket(this.url);  
+    this.ws = new WebSocket(this.url);
     this.internalStream = new Subject<MetricSnapshotMessage>();
     this.metricStream = this.internalStream.asObservable();
+
     this.ws.onopen = (evt: MessageEvent) => {
       console.log('connected to ' + this.url);
-    }
+    };
 
     this.ws.onmessage = (ev: MessageEvent) => {
         this.internalStream.next(JSON.parse(ev.data));

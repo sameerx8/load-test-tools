@@ -5,7 +5,7 @@ import { MetricSnapshotMessage } from '../components/metrics/models/metric-snaps
   name: 'commandOrder'
 })
 export class CommandOrderPipe implements PipeTransform {
-    static _orderByComparator(a:any, b:any): number {
+    static _orderByComparator(a: any, b: any): number {
       if ((isNaN(parseFloat(a)) || !isFinite(a)) || (isNaN(parseFloat(b)) || !isFinite(b))) {
         // Isn't a number so lowercase the string to properly compare
         if (a.toLowerCase() < b.toLowerCase()) {

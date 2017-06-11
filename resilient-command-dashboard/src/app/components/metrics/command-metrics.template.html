@@ -1,0 +1,129 @@
+<div class="col-lg-12">
+  <div class="ibox float-e-margins">
+    <div class="ibox-title"><h5>Resilient Commands Vital Stats</h5></div>
+    <div class="ibox-content">
+      <div class="row">
+        <div class="col-sm-9 m-b-xs">
+
+        </div>
+        <div class="col-sm-3">
+          <div class="input-group">
+            <input class="input-sm form-control" [value]="searchText" [formControl]="searchInputCtrl" placeholder="Search" type="text" />
+            <span class="input-group-btn">
+              <button class="btn btn-sm btn-primary" type="button">Go</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th class="sorting" (click)="setSortKey('commandName')" >Command Name</th>
+              <th class="sorting" (click)="setSortKey('circuitBreakerStatus')">Circuit Breaker</th>
+              <th class="sorting" (click)="setSortKey('commandTag')">Category</th>
+              <th class="sorting" (click)="setSortKey('noOfHosts')">Hosts</th>
+              <th class="sorting" (click)="setSortKey('messagesPerSecond')">M/s</th>
+              <th>Cluster M/s</th>
+              <th>Activity</th>
+              <th class="sorting" (click)="setSortKey('success')">Success</th>
+              <th class="sorting" (click)="setSortKey('failure')">Failure</th>
+              <th class="sorting" (click)="setSortKey('errorPercentage')">Err %</th>
+              <th class="sorting" (click)="setSortKey('latency_90th')">Latency 90th</th>
+              <th class="sorting" (click)="setSortKey('latency_99th')">Latency 99th</th>
+              <th class="sorting" (click)="setSortKey('latency_99_5th')">Latency 99.5th</th>
+              <th class="sorting" (click)="setSortKey('timeout')">Timeout</th>
+              <th class="sorting" (click)="setSortKey('retry')">Retry</th>
+              <th class="sorting" (click)="setSortKey('fallbackSuccess')">Fallback Success</th>
+              <th class="sorting" (click)="setSortKey('fallbackFailure')">Fallback Failure</th>
+              <th class="sorting" (click)="setSortKey('shortCircuited')">Short Circuited</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let commandMetric of commandMetrics | commandFilter:searchText | commandOrder:sortKey:sortAsc" 
+              [class.trans-red]="commandMetric.circuitBreakerStatus!=='CLOSED' || commandMetric.failure>0 || commandMetric.errorPercentage>0">
+
+              <td>{{commandMetric.commandName}}</td>
+              <td>
+                <span class="label label-primary" 
+                  [class.label-danger]="commandMetric.circuitBreakerStatus!=='CLOSED'">
+                  {{commandMetric.circuitBreakerStatus}}
+                </span>
+              </td>
+              <td>{{commandMetric.commandTag}}</td>
+              <td>
+                <span class="badge badge-info">{{commandMetric.noOfHosts}}</span>
+              </td>
+              <td>
+                <span class="badge badge-info">{{commandMetric.messagesPerSecond}}/s</span>
+              </td>
+              <td>
+                <span class="badge badge-info">{{commandMetric.messagesPerSecond / commandMetric.noOfHosts}}/s</span>
+              </td>
+              <td>
+                <span sparkline [datasets]="commandMetric.requestRate" [options]="sparklineOptions"></span>
+              </td>
+              <td>
+                <span class="badge badge-primary">{{commandMetric.success}}</span>
+              </td>
+              <td>
+                <span class="badge" 
+                  [class.badge-success]="commandMetric.failure===0" 
+                  [class.badge-warning]="commandMetric.failure>0" 
+                  [class.badge-error]="commandMetric.failure>=5">
+                  {{commandMetric.failure}}
+                </span>
+              </td>              
+              <td>
+                <span class="badge" 
+                  [class.badge-success]="commandMetric.errorPercentage===0" 
+                  [class.badge-warning]="commandMetric.errorPercentage>0" 
+                  [class.badge-error]="commandMetric.errorPercentage>=50">
+                  {{commandMetric.errorPercentage}}
+                </span>
+              </td>
+              <td>
+                <span class="badge badge-info">{{commandMetric.latency_90th}}</span>
+              </td>
+              <td>
+                <span class="badge badge-info">{{commandMetric.latency_99th}}</span>
+              </td>
+              <td>
+                <span class="badge badge-info">{{commandMetric.latency_99_5th}}</span>
+              </td>
+              <td>
+                <span class="badge" 
+                  [class.badge-success]="commandMetric.timeout===0" 
+                  [class.badge-warning]="commandMetric.timeout>0">
+                  {{commandMetric.timeout}}
+                  </span>
+                </td>
+              <td>
+                <span class="badge" 
+                  [class.badge-success]="commandMetric.retry===0" 
+                  [class.badge-warning]="commandMetric.retry>0">
+                  {{commandMetric.retry}}
+                </span></td>
+              <td>
+                <span class="badge" 
+                  [class.badge-success]="commandMetric.fallbackSuccess>0">
+                  {{commandMetric.fallbackSuccess}}
+                </span> 
+              </td>
+              <td>
+                <span class="badge" 
+                  [class.badge-success]="commandMetric.fallbackFailure===0" 
+                  [class.badge-warning]="commandMetric.fallbackFailure>0">
+                  {{commandMetric.fallbackFailure}}
+                </span>
+              </td>
+              <td>
+                <span class="badge badge-info">{{commandMetric.shortCircuited}}</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
