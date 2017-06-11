@@ -33,6 +33,10 @@ export class CommandMetricsComponent implements OnInit {
     fillColor: '#ffffff'
   };
 
+  /*
+  * Make this a service: sortKeyService
+  *
+  */
   public setSortKey(key: string) {
     const keyIdx = this.sortState.findIndex(c => c.sortKey === key);
 
@@ -50,6 +54,12 @@ export class CommandMetricsComponent implements OnInit {
     this.sortKey = key;
     this.sortAsc = this.sortState[keyIdx] ? this.sortState[keyIdx].asc : true;
   }
+
+
+/*
+ * Make another service - request rate service.
+ * Make another service - command metric data service.
+*/
 
   ngOnInit(): void {
     this.searchInputCtrl
